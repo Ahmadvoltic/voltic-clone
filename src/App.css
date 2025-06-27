@@ -24,22 +24,3 @@
   }
 }
 
-.carousel-shift-0 {
-  transform: translateX(0);
-}
-
-.carousel-shift-1 {
-  transform: translateX(-532px);
-}
-
-.carousel-shift-2 {
-  transform: translateX(-1064px);
-}
-
-.carousel-shift-3 {
-  transform: translateX(-1596px);
-}
-
-.carousel-transition {
-  transition: transform 0.5s ease-in-out;
-}
