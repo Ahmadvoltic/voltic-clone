@@ -22,10 +22,10 @@ const Section4 = () => {
 
             <div className='w-[48%] h-[800px] relative'>
 
-                <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-black via-black/50 to-transparent z-10 backdrop-blur-sm pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-black via-black/50 to-transparent z-10 backdrop-blur-sm pointer-events-none"></div>
                 <VerticalCarousel/>
 
-                <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black via-black/50 to-transparent z-10 backdrop-blur-sm pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black via-black/50 to-transparent z-10 backdrop-blur-sm pointer-events-none"></div>
 
 
             </div>

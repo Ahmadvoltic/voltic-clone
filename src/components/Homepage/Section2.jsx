@@ -168,7 +168,7 @@ const Section2 = () => {
                             <div className='pr-5'>
                                 <p className={`text-lg font-md text-[20px] transition-all duration-2000 transform ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>We provide expert solutions to help businesses navigate challenges and achieve success. Our innovative approach enhances efficiency, adaptability, and growth.</p>
                             </div>
-                            <div className={`bg-[#a100ff] w-[165px] h-[44px] px-[28px] flex items-center rounded-full transition-all duration-2000 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                            <div className={`bg-[#a100ff] w-[165px] h-[44px] px-[28px] flex items-center rounded-full transition-all duration-700 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                                 } hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]`}>
                                 <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
                             </div>
