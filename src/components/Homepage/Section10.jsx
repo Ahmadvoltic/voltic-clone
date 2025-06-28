@@ -1,51 +1,50 @@
-import React from 'react'
+import { useEffect, useRef, useState } from "react";
+import Questions from '../Questions'
 
 const Section10 = () => {
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries;
+                
+                    setIsVisible(entry.isIntersecting);
+                
+            },
+            {
+                threshold: 0.3,
+            }
+        );
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
-            <section className='bg-black w-full pt-[100px]'>
-                <div className='w-[80%] mx-auto'>
+            <section ref={sectionRef} className='pt-[100px] bg-black relative overflow-hidden"'>
 
-                    <div>
-                        <button class="font-bold text-[20px] lg:text-[28px] text-white uppercase flex justify-between items-center w-full py-4">What does a managed IT service provider do?
-                            <span class="w-24 h-12 md:size-[60px] lg:size-[72px] rounded-full flex justify-center items-center transition-transform duration-300 bg-black">
-                                <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 26H6.53591L6.53591 23.8453H22.337L0 1.50829L1.58011 0L23.8453 22.2652V6.46409L26 6.46409V26Z" fill="white"></path></svg>
-                            </span>
-                        </button>
-                    </div>
+                <div className={`transition-all duration-700 ease-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+                    <Questions question="What does a managed IT service provider do?" answer="A managed IT service provider handles all or part of your company’s IT operations, from software development to integration and their successful running. It helps to minimise your workload and makes the business operation smoother and efficient." />
+                </div>
 
-                    <div>
-                        <button class="font-bold text-[20px] lg:text-[28px] text-white uppercase flex justify-between items-center w-full py-4">How can Voltic AI help your business grow through managed IT services?
-                            <span class="w-24 h-12 md:size-[60px] lg:size-[72px] rounded-full flex justify-center items-center transition-transform duration-300 bg-black">
-                                <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 26H6.53591L6.53591 23.8453H22.337L0 1.50829L1.58011 0L23.8453 22.2652V6.46409L26 6.46409V26Z" fill="white"></path></svg>
-                            </span>
-                        </button>
-                    </div>
+                <div className={`transition-all duration-700 ease-out delay-200 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+                    <Questions question="How can Voltic AI help your business grow through managed IT services?" answer="We align your technology with your goals, streamline your operations, enhance cybersecurity, and provide 24/7 support to reduce downtime and boost productivity within your budget." />
+                </div>
 
-                    <div>
-                        <button class="font-bold text-[20px] lg:text-[28px] text-white uppercase flex justify-between items-center w-full py-4">Is outsourcing to a managed IT service provider cost-effective?
-                            <span class="w-24 h-12 md:size-[60px] lg:size-[72px] rounded-full flex justify-center items-center transition-transform duration-300 bg-black">
-                                <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 26H6.53591L6.53591 23.8453H22.337L0 1.50829L1.58011 0L23.8453 22.2652V6.46409L26 6.46409V26Z" fill="white"></path></svg>
-                            </span>
-                        </button>
-                    </div>
+                <div className={`transition-all duration-700 ease-out delay-400 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+                    <Questions question="Is outsourcing to a managed IT service provider cost-effective?" answer="It saves your money because when you go for a managed IT service provider, there is no need for an in-house IT team, decreased operational costs, or managing the issues with on-time maintenance support." />
+                </div>
 
-                    <div>
-                        <button class="font-bold text-[20px] lg:text-[28px] text-white uppercase flex justify-between items-center w-full py-4">Do I lose control of my IT systems when working with a managed IT service provider?
-                            <span class="w-24 h-12 md:size-[60px] lg:size-[72px] rounded-full flex justify-center items-center transition-transform duration-300 bg-black">
-                                <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 26H6.53591L6.53591 23.8453H22.337L0 1.50829L1.58011 0L23.8453 22.2652V6.46409L26 6.46409V26Z" fill="white"></path></svg>
-                            </span>
-                        </button>
-                    </div>
+                <div className={`transition-all duration-700 ease-out delay-600 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+                    <Questions question="Do I lose control of my IT systems when working with a managed IT service provider?" answer="Timelines vary based on scope, but we prioritize agile workflows to ensure efficiency. A minimum viable product (MVP) can take 4–6 weeks, while larger projects may span several months." />
+                </div>
 
-                    <div>
-                        <button class="font-bold text-[20px] lg:text-[28px] text-white uppercase flex justify-between items-center w-full py-4">What industries does Voltic AI serve with managed IT services?
-                            <span class="w-24 h-12 md:size-[60px] lg:size-[72px] rounded-full flex justify-center items-center transition-transform duration-300 bg-black">
-                                <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26 26H6.53591L6.53591 23.8453H22.337L0 1.50829L1.58011 0L23.8453 22.2652V6.46409L26 6.46409V26Z" fill="white"></path></svg>
-                            </span>
-                        </button>
-                    </div>
-
+                <div className={`transition-all duration-700 ease-out delay-800 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
+                    <Questions question="What industries does Voltic AI serve with managed IT services?" answer="Serving a wide range of industries, Voltic AI is helping businesses in tech, eCommerce, healthcare, finance, and other fields with advanced managed IT support and services." />
                 </div>
             </section>
         </>

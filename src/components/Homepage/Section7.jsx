@@ -41,7 +41,7 @@ const Section7 = () => {
                         <span className={`w-2 bg-[#a100ff] absolute right-0 top-0 rounded-2xl transition-all duration-2000 ${isVisible ? "h-full" : "h-0"
                             }`}></span>
                     </div>
-                </div>
+                </div>a
 
             </section>
         </>

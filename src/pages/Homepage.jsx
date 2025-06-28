@@ -11,22 +11,28 @@ import Section8 from '../components/Homepage/Section8'
 import Section9 from '../components/Homepage/Section9'
 import Section10 from '../components/Homepage/Section10'
 import Section11 from '../components/Homepage/Section11'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Homepage = () => {
   return (
     <>
-    <Section1/> 
-    <Slider/> 
-    <Section2/>
-    <Section3/>
-    <Section4/>
-    <Section5/>
-    <Section6/>
-    <Section7/>
-    <Section8/>
-    <Section9/>
-    <Section10/>
-    <Section11/>
+      <div className='w-[100vw]'>
+        <Navbar />
+        <Section1 />
+        <Slider />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <Section8 />
+        <Section9 />
+        <Section10 />
+        <Section11 />
+        <Footer />
+      </div>
     </>
   )
 }

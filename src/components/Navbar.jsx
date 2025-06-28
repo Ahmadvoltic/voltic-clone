@@ -1,14 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [services, setServices] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight * 0.5);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <div className='w-full fixed top-0 z-40'>
+      <nav className={`w-full fixed h-[94px]  top-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
 
-        <div className='w-[1186px] h-[94px] mx-auto flex items-center justify-between'>
+        <div className='md:w-[1186px] w-full h-[94px] mx-auto flex items-center justify-between'>
 
           <div className='cursor-pointer'>
             <Link to="/">
@@ -16,42 +28,48 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className='h-11'>
-            <ul className='flex h-full items-center py-[2px] px-[2px] bg-[#FFFFFF05]  border border-solid border-[#a100ff] rounded-full '>
-              <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full bg-[#a100ff] cursor-pointer transition-all duration-150'>Home</li>
-              <li onMouseEnter={() => { setServices(true) }} onMouseLeave={() => { setServices(false) }} className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Services<span>+</span></li>
-              <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Career</li>
-              <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>About</li>
-              <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Contact us</li>
-            </ul>
-            {services &&
-              <div className='flex gap-8 bg-[#311442] items-center justify-center py-5 rounded-3xl absolute top-22 left-200 w-100 border-blue-800 border-5'>
-                <ul className='text-[#f4f0ff] flex flex-col gap-1'>
-                  <li><Link>Web development</Link></li>
-                  <li><Link>Pay-per-Lead</Link></li>
-                  <li><Link>SaaS</Link></li>
-                  <li><Link>Automation</Link></li>
-                  <li><Link>Web development</Link></li>
-                  <li><Link>Cloud Solutions</Link></li>
-                </ul>
-                <ul className='text-[#f4f0ff] flex flex-col gap-1'>
-                  <li><Link>Mobile App Development</Link></li>
-                  <li><Link>UI/UX Design</Link></li>
-                  <li><Link>Lead Generation (B2B)</Link></li>
-                  <li><Link>Col Email Infrastructure</Link></li>
-                  <li><Link>Cyber Security</Link></li>
-                  <li><Link>Emerging Technologies</Link></li>
-                </ul>
-              </div>}
 
+
+          <div onMouseLeave={() => { setServices(false) }} className='h-20 relative md:flex items-center hidden'>
+            <div className='h-11'>
+              <ul className='flex h-full items-center py-[2px] px-[2px] bg-[#FFFFFF05]  border border-solid border-[#a100ff] rounded-full '>
+                <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full bg-[#a100ff] cursor-pointer transition-all duration-150'>Home</li>
+                <li onMouseEnter={() => { setServices(true) }} className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Services<span>+</span></li>
+                <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Career</li>
+                <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>About</li>
+                <li className='leading-5 py-[8px] font-normal text-[#f4f0ff] px-3 rounded-full hover:bg-[#a100ff] cursor-pointer transition-all duration-150'>Contact us</li>
+              </ul>
+              {services &&
+                <div className='p-[2px] bg-gradient-to-br from-[#001F5C] via-purple-600 to-sky-400 rounded-3xl absolute top-15 left-20 w-100'>
+                  <div className='flex gap-8 bg-[#311442] items-center justify-center py-5 rounded-3xl'>
+                    <ul className='text-[#f4f0ff] flex flex-col gap-1'>
+                      <li><Link>Web development</Link></li>
+                      <li><Link>Pay-per-Lead</Link></li>
+                      <li><Link>SaaS</Link></li>
+                      <li><Link>Automation</Link></li>
+                      <li><Link>Web development</Link></li>
+                      <li><Link>Cloud Solutions</Link></li>
+                    </ul>
+                    <ul className='text-[#f4f0ff] flex flex-col gap-1'>
+                      <li><Link>Mobile App Development</Link></li>
+                      <li><Link>UI/UX Design</Link></li>
+                      <li><Link>Lead Generation (B2B)</Link></li>
+                      <li><Link>Col Email Infrastructure</Link></li>
+                      <li><Link>Cyber Security</Link></li>
+                      <li><Link>Emerging Technologies</Link></li>
+                    </ul>
+                  </div>
+                </div>}
+            </div>
           </div>
 
-          <div className='bg-[#a100ff]  w-[165px] h-[44px] px-[28px] flex items-center rounded-full transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]'>
+
+          <div className='bg-[#a100ff]  md:w-[165px] md:h-[44px] px-[28px] flex items-center rounded-full transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]'>
             <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
           </div>
 
         </div>
-      </div>
+      </nav>
     </>
   )
 }

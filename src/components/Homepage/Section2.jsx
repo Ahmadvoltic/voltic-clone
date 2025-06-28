@@ -31,28 +31,29 @@ const Section2 = () => {
             if (ref1.current) observer1.unobserve(ref1.current);
         };
     }, []);
+
     return (
         <>
-            <div className=' mx-auto bg-black text-white'>
-                <section className='w-[80%] pt-40 mx-auto flex flex-col'>
+            <div className='bg-black text-white w-full'>
+                <section className='w-full md:w-[80%] pt-40 mx-auto flex flex-col'>
 
-                    <div ref={ref1} className='flex gap-28'>
-                        <div className='flex justify-center items-center font-bold'>
-                            <h1 className={`text-[50px] transition-all duration-2000 transform ${isVisible1 ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>OUT MANAGED IT SERVICES</h1>
-                        </div>
-                        <div className='flex flex-col justify-center gap-3 w-[40%] relative'>
-                            <div className='pr-5'>
-                                <p className={`text-lg font-md text-[20px] transition-all duration-2000 transform ${isVisible1 ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>We are committed to making your business excel and stand out among your competitors. No matter if you need managed IT services for small businesses or an already established company, we have all kinds of services for your IT challenges.</p>
-                            </div>
-                            <div className={`bg-[#a100ff] w-[165px] h-[44px] px-[28px] flex items-center rounded-full transition-all duration-2000 transform ${isVisible1 ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                                } hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]`}>
-                                <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
-                            </div>
-
-                            <span className={`w-2 bg-[#a100ff] absolute right-0 top-0 rounded-2xl transition-all duration-2000 ${isVisible1 ? "h-full" : "h-0"
-                                }`}></span>
-                        </div>
-                    </div>
+                    <div ref={ref1} className='flex gap-28 w-[80%] mx-auto justify-between'>
+                                        <div className='flex justify-center items-center font-bold w-[40%]'>
+                                            <h1 className={`text-[50px] transition-all duration-2000 transform ${isVisible1 ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>OUT MANAGED IT SERVICES</h1>
+                                        </div>
+                                        <div className='flex flex-col justify-center gap-3 w-[40%] relative'>
+                                            <div className='pr-5'>
+                                                <p className={`text-lg font-md text-[20px] transition-all duration-2000 transform ${isVisible1 ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>We are committed to making your business excel and stand out among your competitors. No matter if you need managed IT services for small businesses or an already established company, we have all kinds of services for your IT challenges.</p>
+                                            </div>
+                                            <div className={`bg-[#a100ff] w-[165px] h-[44px] px-[28px] flex items-center rounded-full transition-all duration-700 transform ${isVisible1 ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                                                } hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]`}>
+                                                <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
+                                            </div>
+                    
+                                            <span className={`w-2 bg-[#a100ff] absolute right-0 top-0 rounded-2xl transition-all duration-2000 ${isVisible1 ? "h-full" : "h-0"
+                                                }`}></span>
+                                        </div>
+                                    </div>
 
 
                     <div>
