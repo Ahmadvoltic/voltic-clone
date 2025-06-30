@@ -14,7 +14,7 @@ const Section11 = () => {
 
 
                     <div className="mx-auto h-[430px] flex flex-col items-center justify-center px-5 lg:px-0">
-                        <h4 className="font-bold text-3xl lg:text-[52px] leading-5 lg:leading-[78px] text-white mb-2.5">Ready to Take the Next Step?</h4>
+                        <h4 className="font-bold text-3xl lg:text-[52px] leading-9 lg:leading-[78px] text-white mb-2.5">Ready to Take the Next Step?</h4>
                         <p className="font-normal text-base text-center lg:text-xl leading-7 text-white mb-7">Join thousands who are already seeing results — get started today in just minutes.</p>
                         <button className="bg-[#a100ff]  w-fit h-[52px] rounded-full mx-auto pl-7 pr-1 text-sm font-medium leading-5 text-[#F4F0FF] flex justify-center gap-[10px] items-center transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]">Schedule a meeting
 

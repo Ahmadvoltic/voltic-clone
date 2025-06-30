@@ -21,16 +21,17 @@ const Section1 = () => {
                             <p> Your Trusted IT Service Provider</p>
                         </div>
                         <div>
-                            <h1 className="text-8xl font-bold text-center">Best IT Servive Provider <br /> for ROI & Growth</h1>
+                            <h1 className="md:text-8xl text-[30px] font-bold text-center">Best IT Servive Provider <br /> for ROI & Growth</h1>
                         </div>
-                        <div className="max-w-[800px] mx-auto py-4 rounded-3xl bg-[#652087b2] bg px-7"><p className="text-white text-xl font-normal leading-6 text-center">Voltic AI is a professional managed IT service provider to let you grow, thrive, and scale your business with software product development and integration support. We not only lessen your work burden</p></div>
+                        <div className="max-w-[800px] mx-auto py-4 rounded-3xl bg-[#2425361A] backdrop-blur-[50px] z-10 px-7">
+                            <p className="text-white md:text-xl text-[20px] font-normal leading-6 text-center ">Voltic AI is a professional managed IT service provider to let you grow, thrive, and scale your business with software product development and integration support. We not only lessen your work burden</p></div>
                         <button className="bg-[#a100ff] w-fit h-[52px] rounded-full mx-auto pl-7 pr-1 text-sm font-normal leading-5 text-[#F4F0FF] flex justify-center gap-[10px] items-center transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)] aos-init aos-animate">Schedule a meeting<span className="bg-white h-11 w-11 rounded-full flex justify-center items-center"><svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.6436 11L17.0566 21.5871L15.8846 20.4151L24.4792 11.8204L0.179775 11.8204L0.218842 10.1405L24.4402 10.1405L15.8455 1.54587L17.0175 0.373864L27.6436 11Z" fill="#A100FF"></path></svg></span></button>
 
 
-                        <div onClick={()=>{setShowForm(!showForm)}} className='absolute right-0 flex items-center justify-center cursor-pointer'>
+                        <div onClick={()=>{setShowForm(!showForm)}} className='absolute right-0 flex items-center justify-center cursor-pointer z-20'>
                             <svg width="48" height="226" viewBox="0 0 48 226" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M48.875 11.25V0.75L43.3085 6.59483C40.4774 9.56753 36.5516 11.25 32.4464 11.25H15.875C7.59073 11.25 0.875 17.9657 0.875 26.25V199.25C0.875 207.534 7.59073 214.25 15.875 214.25H31.9565C36.0557 214.25 39.9764 215.928 42.8068 218.893L48.875 225.25V214.25V11.25Z" fill="#A100FF"></path><text x="24" y="116" fill="white" fontSize="16" fontWeight="600" textAnchor="middle" transform="rotate(-90, 24, 113)">Let's Talk Business</text></svg>
                             {showForm &&
-                                <div className='p-[2px] bg-gradient-to-br from-[#001F5C] via-purple-600 to-sky-400 rounded-l-[40px]'>
+                                <div className='p-[2px] bg-gradient-to-br from-[#001F5C] via-purple-600 to-sky-400 rounded-l-[40px] z-20'>
                                     <div className="p-[2px] bg-gradient-to-br from-[#001F5C] via-purple-600 to-sky-400 rounded-l-[40px] rounded-r-[0px] -mr-2">
                                         <div className="relative overflow-hidden min-h-[588px] w-[350px] lg:w-[400px] xl:w-[555px] rounded-s-[40px] flex flex-col gap-7 p-8 bg-gradient-to-r from-[#1B052D] to-[#07000C]">
                                             <div className="md:hidden absolute top-8 right-8 text-white font-black cursor-pointer z-[999]">✕</div>

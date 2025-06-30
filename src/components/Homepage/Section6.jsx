@@ -148,7 +148,7 @@ const Section6 = () => {
         </div>
 
 
-        <div className="absolute bottom-1 right-50 flex space-x-2 z-30">
+        <div className="absolute bottom-1 right-10 md:right-50 flex space-x-2 z-30">
           <button onClick={scrollLeft} className="size-[72px] rounded-full bg-[#101010] text-white p-3 shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 flex justify-center items-center">
             <svg width="26" height="26" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.615226 14L14.3784 0.236816L15.902 1.76042L4.72895 12.9335L36.3182 12.9335L36.2675 15.1173L4.77973 15.1173L15.9528 26.2904L14.4292 27.814L0.615226 14Z" fill="white"></path></svg>
           </button>

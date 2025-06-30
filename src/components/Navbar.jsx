@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   const [services, setServices] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false);
+  const [burgerIcon, setBurgerIcon] = useState(false)
 
 
   useEffect(() => {
@@ -18,9 +19,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full fixed h-[94px]  top-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
+      <nav className={`fixed h-[94px] w-screen  top-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
 
-        <div className='md:w-[1186px] w-full h-[94px] mx-auto flex items-center justify-between'>
+        <div className='md:w-[1186px] h-[94px] mx-auto flex items-center justify-between w-screen px-5 md:px-0'>
 
           <div className='cursor-pointer'>
             <Link to="/">
@@ -64,9 +65,34 @@ const Navbar = () => {
           </div>
 
 
-          <div className='bg-[#a100ff]  md:w-[165px] md:h-[44px] px-[28px] flex items-center rounded-full transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]'>
+          <div className='bg-[#a100ff]  w-[165px] h-[44px] px-[28px] hidden md:flex items-center rounded-full transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]'>
             <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
           </div>
+
+          <div onClick={() => { setBurgerIcon(!burgerIcon) }} className='md:hidden'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-9 h-9 invert"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </div>
+
+          {burgerIcon &&
+            <div className='bg-[#0e0117] w-screen fixed top-0 left-0'>
+
+              <div onClick={() => { setBurgerIcon(!burgerIcon) }} className=' absolute top-5 right-10'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" className="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              </div>
+
+              <div>
+                <ul className='text-white flex flex-col gap-5 px-8 py-10'>
+                  <li>Our Works</li>
+                  <li>Contact Us</li>
+                  <li>About Us</li>
+                  <li><div className='bg-[#a100ff]  w-full h-[44px] px-[28px] flex items-center rounded-full transition-all duration-300 hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]'>
+                    <Link to='/' className='text-sm text-[#f4f0ff]'>Free Consultation</Link>
+                  </div></li>
+                </ul>
+              </div>
+
+            </div>
+          }
 
         </div>
       </nav>

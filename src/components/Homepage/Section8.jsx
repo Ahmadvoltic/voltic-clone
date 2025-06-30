@@ -10,7 +10,7 @@ const Section8 = () => {
     return (
         <>
             <section className='bg-black w-full pt-[100px]'>
-                <div className='w-[80#] mx-auto'>
+                <div className='w-[90%] mx-auto'>
                     <div className='flex h-[400px] sm:h-[500px] md:h-[600px] lg:h-[677px] w-full items-center justify-center overflow-hidden bg-black'>
 
 

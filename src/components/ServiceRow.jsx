@@ -21,7 +21,7 @@ export default function ServiceRow({ cards }) {
   }, []);
 
   return (
-    <div ref={rowRef} className="row-1 pt-[100px] flex justify-between" style={{ perspective: "1000px" }}>
+    <div ref={rowRef} className="row-1 pt-[100px] px-[20px] md:px-0 gap-9 md:gap-0 flex flex-col md:flex-row md:justify-between" style={{ perspective: "1000px" }}>
       {cards.map((card, idx) => (
         <ServiceCard
           key={idx}

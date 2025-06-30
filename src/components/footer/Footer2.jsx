@@ -4,13 +4,13 @@ const Footer2 = () => {
     return (
         <>
             <section className='bg-black w-full py-[100px]'>
-                <div className='w-[80%] mx-auto flex flex-col justify-center gap-7'>
+                <div className='md:w-[80%] w-full mx-auto flex flex-col justify-center gap-7'>
                     <span className='w-full h-1 opacity-80 rounded-full  bg-gray-900'></span>
 
-                    <div className='w-auto lg:w-[480px] mx-auto h-16 mt-[26px] lg:h-[66px] py-[7px] px-2 rounded-full bg-[#101010] backdrop-blur-[20px] relative'>
+                    <div className='w-full md:w-auto lg:w-[480px] mx-auto h-16 mt-[26px] lg:h-[66px] py-[7px] px-9 md:px-2 rounded-full bg-[#101010] backdrop-blur-[20px] relative'>
                         <form className="w-full mx-auto h-full flex items-center gap-1 relative">
                             <input type="text" autoComplete="off" placeholder="Your Email" className="bg-[#101010] rounded-4xl w-full pl-6 h-[62px] placeholder:text-white outline-none text-white" name="email" data-gtm-form-interact-field-id="3" />
-                            <button type="submit" className="absolute right-0 z-10 bg-[#a100ff] h-[52px] rounded-full px-10 py-[14px] text-lg font-medium leading-7 text-white flex justify-center items-center transition-all duration-300  hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]">Subscribe</button>
+                            <button type="submit" className="absolute right-0 z-10 bg-[#a100ff] h-[52px] rounded-full px-6 md:px-10 py-[14px] text-lg font-medium leading-7 text-white flex justify-center items-center transition-all duration-300  hover:shadow-[0_0_20px_6px_rgba(161,0,255,0.8)]">Subscribe</button>
                         </form>
                     </div>
 
@@ -21,8 +21,8 @@ const Footer2 = () => {
                     </div>
 
                     <div>
-                        <p className="text-white text-lg leading-7 lg:leading-[18px] font-medium text-center flex items-start justify-center lg:gap-[5px]">&copy; Copyright 2025, All Rights Reserved by Voltic.ai</p>
-                        <p className="text-white text-lg leading-[18px] font-medium text-center mt-[8px]">Terms &amp; Conditions</p>
+                        <p className="text-white text-sm md:text-lg leading-7 lg:leading-[18px] font-medium text-center flex items-start justify-center lg:gap-[5px]">&copy; Copyright 2025, All Rights Reserved by Voltic.ai</p>
+                        <p className="text-white text-sm md:text-lg leading-[18px] font-medium text-center mt-[8px]">Terms &amp; Conditions</p>
                     </div>
 
                 </div>

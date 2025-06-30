@@ -1,7 +1,7 @@
 export default function ServiceCard({ imageSrc, title, description, isVisible }) {
   return (
     <div
-      className="w-[23%] h-[428px] 2xl:h-[528px] relative p-7 transition-all duration-1000"
+      className="md:w-[23%] h-[428px] 2xl:h-[528px] relative p-7 transition-all duration-1000"
       style={{
         transform: isVisible ? "rotateY(0deg)" : "rotateY(90deg)",
         transformStyle: "preserve-3d",

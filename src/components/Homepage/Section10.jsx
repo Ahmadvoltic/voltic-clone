@@ -25,7 +25,7 @@ const Section10 = () => {
 
     return (
         <>
-            <section ref={sectionRef} className='pt-[100px] bg-black relative overflow-hidden"'>
+            <section ref={sectionRef} className='md:pt-[100px] pt-16 bg-black relative overflow-hidden px-[20px] md:px-0'>
 
                 <div className={`transition-all duration-700 ease-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"}`}>
                     <Questions question="What does a managed IT service provider do?" answer="A managed IT service provider handles all or part of your company’s IT operations, from software development to integration and their successful running. It helps to minimise your workload and makes the business operation smoother and efficient." />
